@@ -8,7 +8,9 @@ import {
   useTransform,
 } from "framer-motion";
 import { useRef } from "react";
+
 export const Hero = () => {
+
   const section = useRef(null);
   const { scrollYProgress } = useScroll({
     target: section,
@@ -85,7 +87,7 @@ export const Hero = () => {
           AI SEO
         </h1>
         <p className="text-lg md:text-xl text-white/50 mt-5 text-center max-w-xl mx-auto">
-          Elevate your site's visibility effortlessly with AI, where smart
+          Elevate your site{"`"}s visibility effortlessly with AI, where smart
           technology meets user-friendly SEO tools.
         </p>
         <div className="mt-5 flex justify-center">

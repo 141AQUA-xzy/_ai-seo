@@ -41,8 +41,8 @@ export const Testimonials = () => {
           Beyond Expectations
         </h2>
         <p className="text-white/70 md:text-xl md:max-w-lg text-center mt-5 max-w-sm mx-auto tracking-tight">
-          Our revolutionary AI SEO tools have transformed our clients'
-          strategies
+          Our revolutionary AI SEO tools have transformed our clients{"`"}
+          {" "}strategies
         </p>
         <div className="flex overflow-hidden mt-10 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
           <motion.div
@@ -69,7 +69,9 @@ export const Testimonials = () => {
                   {testimonial.text}
                 </div>
                 <div className="flex items-center gap-3 mt-5">
-                  <div className="relative after:content-[''] after:absolute after:inset-0 after:bg-[rgb(140,69,244)] after:mix-blend-soft-light before:content-[''] before:absolute before:inset-0 before:border before:border-white/30  before:rounded-lg /* overlaying */">
+                  <div className="relative after:content-[&apos;&apos;] 
+                  after:absolute after:inset-0 after:bg-[rgb(140,69,244)] after:mix-blend-soft-light before:content-[&apos;&apos;] 
+                   before:absolute before:inset-0 before:border before:border-white/30  before:rounded-lg /* overlaying */">
                     <Image
                       src={testimonial.avatarImg}
                       alt={`Avatar for ${testimonial.name}`}

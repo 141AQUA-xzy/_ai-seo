@@ -44,9 +44,9 @@ const FeatureTab = (
   props: (typeof tabs)[number] &
     ComponentPropsWithoutRef<"div"> & { selected: boolean }
 ) => {
-  const xPercentage = useMotionValue(50);
-  const yPercentage = useMotionValue(0);
-  const maskImage = useMotionTemplate`radial-gradient(80px 80px at ${xPercentage} ${yPercentage}, black, transparent)`;
+  // const xPercentage = useMotionValue(50);
+  // const yPercentage = useMotionValue(0);
+  // const maskImage = useMotionTemplate`radial-gradient(80px 80px at ${xPercentage} ${yPercentage}, black, transparent)`;
 
   const dotLottieRef = useRef<DotLottieCommonPlayer>(null);
 
@@ -55,8 +55,8 @@ const FeatureTab = (
   useEffect(() => {
     if (!tabRef.current || !props.selected) return;
 
-    xPercentage.set(0);
-    yPercentage.set(0);
+    // xPercentage.set(0);
+    // yPercentage.set(0);
 
     const { height, width } = tabRef.current?.getBoundingClientRect() || {};
 
@@ -77,8 +77,8 @@ const FeatureTab = (
       times,
     };
 
-    animate(xPercentage, [0, 100, 100, 0, 0], options);
-    animate(yPercentage, [0, 0, 100, 100, 0], options);
+    // animate(xPercentage, [0, 100, 100, 0, 0], options);
+    // animate(yPercentage, [0, 0, 100, 100, 0], options);
   }, [props.selected]);
 
   const handleTabHover = () => {
@@ -96,10 +96,10 @@ const FeatureTab = (
     >
       {props.selected && (
         <motion.div
-          style={{
-            maskImage: maskImage,
-          }}
-          className="absolute inset-0 -m-px border border-[#A369FF] rounded-xl"
+          // style={{
+          //   maskImage: maskImage,
+          // }}
+          className="absolute inset-0 -m-px border border-[#A369FF] [mask-image:radial-gradient(80px_80px_at_0px_0px, black, transparent)] rounded-xl"
         ></motion.div>
       )}
       <div className="h-12 w-12 border border-white/15 rounded-lg inline-flex items-center justify-center">
